@@ -36,7 +36,7 @@ txn.SetType(Discord.LobbyType.Public);
 txn.SetMetadata("a", "123");
 
 // Create it!
-lobbyManager.CreateLobby(txn, (result, lobby) =>
+lobbyManager.CreateLobby(txn, (Result result, ref Lobby lobby) =>
 {
   Console.WriteLine("lobby {0} created with secret {1}", lobby.Id, lobby.Secret);
 
